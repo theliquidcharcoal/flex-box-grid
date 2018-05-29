@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Flexbox Grid with SASS and Jade
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href='css/grid.css')
+
+    body
+        .title
+            h1 Hi! I am a Flexible grid system.
+            h2 My DNA/RNA are renferencing flex-box so you now know better how to work with me right.
+        .container
+            .row
+                each val in [12, 11, 1, 10, 2, 9, 3, 8, 4, 7, 5, 6, 6, 5, 7, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+                    div(class="col-"+val)= val
+            .row
+                - for (var j = 1, i = 11; j < 12; j++, i--)
+                    div(class="col-"+j+" col-offset-left-"+i)= j
+            .row
+                - for (var j = 1, i = 11; j < 12; j++, i--)
+                    div(class="col-"+j+" col-offset-right-"+i)= j
+            
+        footer
+            p!= 'Made with' + ' <span class="heart">&#x2764;</span> by LiquidCharcoal'
+                //- - for (var i = 12; i >= 1; i--)
+                //-     div(class="col-"+i)= val
+    

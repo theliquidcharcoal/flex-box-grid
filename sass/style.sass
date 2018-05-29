@@ -1,0 +1,55 @@
+// Variables
+$bg-blue: #1b1b1b
+$temp: #fdfdfd
+$title: #b9ff00
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700')
+
+*
+    box-sizing: border-box
+
+body
+    background: $bg-blue
+    height: 100%
+    font-family: 'Montserrat', sans-serif
+
+.title
+    h1
+        color: $title
+        font-weight: 400
+    h2
+        color: #fff
+        font-weight: 400
+    h1, h2, div
+        text-align: center
+.title
+    width: calc(100% - 15rem)
+    margin: 0 auto
+.container
+    border: 1px solid $temp
+    // border-radius: 10px
+    width: calc(100% - 10rem)
+    max-width: 50rem
+    margin: 0 auto
+    
+    div
+        color: $title
+
+div[class^="col-"],
+div[class^="col-offset-"]
+    background: transparent
+    border: 1px solid $title
+    text-align: center
+    padding: 1rem 0
+
+
+footer
+    
+    p
+        text-align: center
+        color: $title
+        .heart
+            color: red
+            font-size: 1.5rem
